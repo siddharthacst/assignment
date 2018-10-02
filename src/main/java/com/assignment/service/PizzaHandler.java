@@ -34,7 +34,7 @@ public class PizzaHandler {
         System.out.println("Enter the input file name and the output file name");
         TreeMap<String, List<Date>> sortedPizzas;
 
-        if (0 < args.length) {
+        if (1 < args.length) {
             String input = args[0];
             System.out.println("Parsing from input file name: " + input);
             String output = args[1];
@@ -47,6 +47,8 @@ public class PizzaHandler {
             //Storing in a TextFile
             System.out.println("Printing into output file: " + output);
             orderAccess.writePizzaOrder(sortedPizzas, output);
+        } else {
+            System.out.println("Atleast 2 arguments the input file and the output file is required to begin : ");
         }
     }
 

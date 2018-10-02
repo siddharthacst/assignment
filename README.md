@@ -56,3 +56,8 @@ Assumptions:
 6. Epoch time in Long can be changed into human readable format.
 7. Skipping this line if only one column found
 8. Skips line if line is empty.
+
+Running for businees users:(Minimum requirement JRE in machine)
+
+1. Download the .jar file in the project and keep the pizza text file in the same directory.
+2. $java -jar pizzahandler.jar sample_data_ordered.txt sorted_data.txt. Check the output file for verifying
