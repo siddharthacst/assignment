@@ -59,5 +59,5 @@ $ mvn exec:java -Dexec.mainClass="com.assignment.service.PizzaHandlerIntegration
 
 **Running for business users:(Minimum requirement JRE in machine)**
 
-1. Download the .jar file in the project and keep the pizza text file in the same directory.
+1. Download the **pizzahandler.jar** file in the project and keep the pizza text file in the same directory.
 2. $java -jar pizzahandler.jar sample_data_ordered.txt sorted_data.txt. Check the output file for verifying
