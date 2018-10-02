@@ -43,9 +43,7 @@ public class OrderAccessImpl implements OrderAccess {
                 //Split line by one or more spaces
                 String[] slices = line.split("\\s+");
                 if (slices.length == 2) {//Process the pizzas which come with order and time
-                    String key = null;
-                    Long value = -1l;
-                    if (slices[0] != null && !slices[0].trim().equals("")) {
+                    if (slices[0] != null && !slices[0].trim().isEmpty()) {
                         try {
                             //Epoch time in Long can be changed into human readable format.
                             List<Date> dates = map.get(slices[0]);
@@ -53,8 +51,7 @@ public class OrderAccessImpl implements OrderAccess {
                                 dates = new ArrayList<Date>();
                                 dates.add(new Date(Long.parseLong(slices[1])));
                                 map.put(slices[0], dates);
-                            }
- else {
+                            } else {
                                 dates.add(new Date(Long.parseLong(slices[1])));
                                 map.put(slices[0], dates);
                             }
@@ -69,6 +66,8 @@ public class OrderAccessImpl implements OrderAccess {
                 } else {
                     System.out.println("Skipping this line as only one column found");
                 }
+            } else {
+                System.out.println("line is empty.");
             }
         }
 
@@ -76,7 +75,6 @@ public class OrderAccessImpl implements OrderAccess {
 
         return map;
     }
-
 
     @Override
     public void writePizzaOrder(TreeMap<String, List<Date>> sortedPizzas, String output) throws IOException {
@@ -87,7 +85,7 @@ public class OrderAccessImpl implements OrderAccess {
         for (Map.Entry<String, List<Date>> entry : sortedPizzas.entrySet()) {
             for (Date date : entry.getValue()) {
                 out.write(entry.getKey() + "\t" + date);
-            out.newLine();
+                out.newLine();
             }
         }
         out.close();

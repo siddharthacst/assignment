@@ -14,7 +14,7 @@ import com.assignment.dataaccess.OrderAccess;
 import com.assignment.dataaccess.impl.OrderAccessImpl;
 
 /**
- * Class that services the pizza sorting and converts the dates to human readable formats
+ * Class that services the pizza sorting and converts the dates to human readable formats. Handler for the rest controller in FUTURE
  * 
  * @author Sid
  *
@@ -22,7 +22,6 @@ import com.assignment.dataaccess.impl.OrderAccessImpl;
 public class PizzaHandler {
 
     private OrderAccess orderAccess = new OrderAccessImpl();
-
 
     /**
      * The arguments can later come as a body in a http POST call. In that case we would need a rest controller defined which hands down the list to

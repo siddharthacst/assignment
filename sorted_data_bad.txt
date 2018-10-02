@@ -1,6 +1,5 @@
 Order	 Time 
 Bread	Sat Jan 17 20:23:25 CST 1970
-Meat	Sun Jan 18 04:22:56 CST 1970
 Pizza	Sat Jan 17 20:21:59 CST 1970
 VegVeg	Sat Jan 17 19:31:35 CST 1970
 bread	Sat Jan 17 20:20:32 CST 1970
