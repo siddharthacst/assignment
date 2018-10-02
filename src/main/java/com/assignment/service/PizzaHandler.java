@@ -1,10 +1,5 @@
 package com.assignment.service;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -64,17 +59,5 @@ public class PizzaHandler {
                 System.out.println(key + "\t" + date);
             }
         }
-    }
-
-    private static void writeToFile(TreeMap<String, Date> sortedPizzas, String output) throws IOException {
-
-        BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(output))));
-        out.write("Order" + "\t" + " Time ");
-        out.newLine();
-        for (Map.Entry<String, Date> entry : sortedPizzas.entrySet()) {
-            out.write(entry.getKey() + "\t" + entry.getValue());
-            out.newLine();
-        }
-        out.close();
     }
 }
