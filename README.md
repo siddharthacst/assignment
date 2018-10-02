@@ -46,7 +46,7 @@ To run the integration test from cmd line:
 $ mvn exec:java -Dexec.mainClass="com.assignment.service.PizzaHandlerIntegration" -Dexec.args="sample_data_ordered.txt sorted_data.txt"
 
 
-Assumptions:
+**Assumptions:**
 
 1. mvn is installed
 2. jre atleast 1.7
