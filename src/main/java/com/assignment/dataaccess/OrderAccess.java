@@ -6,10 +6,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.TreeMap;
 
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+
 /**
  * This interface defines the method used to get and store the orders
  * 
- * We can have various impls of these depending on where we want to save, For example, Reading data from DB and stores back in DB
+ * We can have various impls of these depending on where we want to save, For example, Reading data from DB and stores back in DB Can leverage
+ * {@link JdbcTemplateAutoConfiguration}
  * 
  * @author Sid
  *

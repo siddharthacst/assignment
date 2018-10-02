@@ -10,15 +10,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.assignment.dataaccess.OrderAccess;
 import com.assignment.dataaccess.impl.OrderAccessImpl;
 
 /**
- * Class that services the pizza sorting and converts the dates to human readable formats. Handler for the rest controller in FUTURE
+ * Class that services the pizza sorting and converts the dates to human readable formats. Handler for the {@link RestController} in FUTURE
  * 
  * @author Sid
  *
  */
+@Component
 public class PizzaHandler {
 
     private OrderAccess orderAccess = new OrderAccessImpl();
